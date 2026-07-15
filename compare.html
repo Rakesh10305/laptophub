@@ -1,31 +1,216 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Compare Rigs</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style> body { background-color: #131314; color: white; } </style>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Compare gaming laptops at LaptopHub. Find the perfect specs for your needs."/>
+    
+    <title>Compare Gaming Laptops - LaptopHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        body { 
+            background-color: #131314; 
+            color: white; 
+            font-family: 'Be Vietnam Pro', sans-serif;
+            overflow-x: auto;
+        }
+        .glass { 
+            background: rgba(255,255,255,0.05); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+        .comparison-table {
+            min-width: 100%;
+        }
+        .spec-row {
+            display: grid;
+            grid-template-columns: 150px repeat(3, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            .spec-row {
+                grid-template-columns: 120px repeat(2, 1fr);
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+        }
+    </style>
 </head>
-<body class="p-4">
-    <nav class="flex items-center gap-4 mb-8">
-        <a href="index.html" class="material-symbols-outlined">arrow_back</a>
-        <h1 class="text-2xl font-bold">Compare Rigs</h1>
-    </nav>
+<body class="pb-20">
+    <!-- Header -->
+    <header class="flex items-center gap-4 h-16 px-4 border-b border-white/10 bg-black/30 sticky top-0 z-40">
+        <a href="index.html" class="material-symbols-outlined hover:text-[#00e0ff] transition" aria-label="Back to home">arrow_back</a>
+        <h1 class="text-2xl font-bold flex items-center gap-2">
+            <span class="material-symbols-outlined">compare_arrows</span>
+            Compare Rigs
+        </h1>
+    </header>
 
-    <div class="flex flex-col gap-6">
-        <div class="bg-gray-900 p-4 rounded-xl border border-white/10">
-            <div class="text-[#b0c6ff] font-bold mb-4">Display Refresh</div>
-            <div class="flex justify-between">
-                <div class="text-center">
-                    <div class="text-sm">OMEN 16</div>
-                    <div class="font-bold">165Hz</div>
-                </div>
-                <div class="text-gray-600">vs</div>
-                <div class="text-center">
-                    <div class="text-sm">Standard</div>
-                    <div class="font-bold">144Hz</div>
-                </div>
+    <main class="p-4 md:p-8 max-w-6xl mx-auto">
+        <div class="mb-6">
+            <p class="text-gray-400">Select and compare specifications of different gaming laptops to find the perfect match for your needs.</p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="glass rounded-xl overflow-hidden">
+            <!-- Header Row -->
+            <div class="spec-row bg-black/50 font-bold border-b-2 border-[#00e0ff]">
+                <div class="flex items-center">Specification</div>
+                <div class="flex items-center">HP OMEN 16</div>
+                <div class="flex items-center">ASUS ROG G16</div>
+                <div class="flex items-center">Lenovo Legion</div>
+            </div>
+
+            <!-- Processor -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Processor</div>
+                <div>Intel i9-13900H</div>
+                <div>Intel i7-13700H</div>
+                <div>AMD Ryzen 9 7945HX3D</div>
+            </div>
+
+            <!-- GPU -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">GPU</div>
+                <div class="text-[#00e0ff]">RTX 4080</div>
+                <div class="text-[#568dff]">RTX 4070</div>
+                <div class="text-[#00e0ff]">RTX 4090</div>
+            </div>
+
+            <!-- RAM -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">RAM</div>
+                <div>32GB DDR5</div>
+                <div>16GB DDR5</div>
+                <div>32GB DDR5</div>
+            </div>
+
+            <!-- Storage -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Storage</div>
+                <div>1TB NVMe SSD</div>
+                <div>512GB NVMe SSD</div>
+                <div>1TB NVMe SSD</div>
+            </div>
+
+            <!-- Display -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Display</div>
+                <div>16" 165Hz QHD</div>
+                <div>16" 144Hz FHD</div>
+                <div>16" 165Hz QHD</div>
+            </div>
+
+            <!-- Refresh Rate -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Refresh Rate</div>
+                <div class="text-[#00e0ff] font-bold">165Hz</div>
+                <div>144Hz</div>
+                <div class="text-[#00e0ff] font-bold">165Hz</div>
+            </div>
+
+            <!-- Battery -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Battery</div>
+                <div>86Wh Fast Charge</div>
+                <div>90Wh</div>
+                <div>80Wh Fast Charge</div>
+            </div>
+
+            <!-- Weight -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Weight</div>
+                <div>2.4 kg</div>
+                <div class="text-[#00e0ff] font-bold">2.2 kg (Lightest)</div>
+                <div>2.5 kg</div>
+            </div>
+
+            <!-- Build -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Build</div>
+                <div>Aluminum</div>
+                <div>Magnesium</div>
+                <div>Aluminum</div>
+            </div>
+
+            <!-- Keyboard -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Keyboard</div>
+                <div>RGB Mechanical</div>
+                <div>RGB Mechanical</div>
+                <div>RGB Mechanical</div>
+            </div>
+
+            <!-- Warranty -->
+            <div class="spec-row hover:bg-white/5 transition">
+                <div class="font-medium">Warranty</div>
+                <div>2 Years</div>
+                <div>2 Years</div>
+                <div class="text-[#00e0ff] font-bold">3 Years (Best)</div>
+            </div>
+
+            <!-- Price -->
+            <div class="spec-row hover:bg-white/5 transition bg-gradient-to-r from-black/50 to-transparent border-t-2 border-[#00e0ff] font-bold text-lg">
+                <div>Price</div>
+                <div>₹1,45,000</div>
+                <div class="text-[#00e0ff]">₹1,12,000 (Lowest)</div>
+                <div>₹1,85,000</div>
+            </div>
+
+            <!-- CTA Row -->
+            <div class="spec-row border-t-2 border-white/10 bg-black/50">
+                <div></div>
+                <button onclick="buyProduct(1)" class="bg-[#568dff] py-2 px-4 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
+                <button onclick="buyProduct(2)" class="bg-[#568dff] py-2 px-4 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
+                <button onclick="buyProduct(3)" class="bg-[#568dff] py-2 px-4 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
             </div>
         </div>
-    </div>
-</body></html>
+
+        <!-- Summary Section -->
+        <section class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="glass p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-3 text-[#568dff]">Best Value</h3>
+                <p class="text-gray-400 mb-4">ASUS ROG Strix G16 offers the best value with excellent performance at a lower price point.</p>
+                <button onclick="buyProduct(2)" class="text-[#00e0ff] hover:underline font-bold">View Details →</button>
+            </div>
+            <div class="glass p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-3 text-[#00e0ff]">Best Balance</h3>
+                <p class="text-gray-400 mb-4">HP OMEN 16 provides the perfect balance of performance, portability, and features for gamers.</p>
+                <button onclick="buyProduct(1)" class="text-[#00e0ff] hover:underline font-bold">View Details →</button>
+            </div>
+            <div class="glass p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-3 text-[#00e0ff]">Ultimate Power</h3>
+                <p class="text-gray-400 mb-4">Lenovo Legion Pro 7 is the ultimate gaming powerhouse for demanding AAA titles and creators.</p>
+                <button onclick="buyProduct(3)" class="text-[#00e0ff] hover:underline font-bold">View Details →</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function buyProduct(id) {
+            const products = {
+                1: { name: 'HP OMEN 16', price: 145000 },
+                2: { name: 'ASUS ROG Strix G16', price: 112000 },
+                3: { name: 'Lenovo Legion Pro 7', price: 185000 }
+            };
+
+            const product = products[id];
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = {id, name: product.name, price: product.price, quantity: 1, timestamp: Date.now()};
+            
+            const existingItem = cart.find(p => p.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(item);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

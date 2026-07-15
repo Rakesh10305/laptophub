@@ -1,40 +1,242 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HP OMEN 16 - Details</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
-    body { background-color: #131314; color: white; }
-    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-</style>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Explore high-performance gaming laptops at LaptopHub with detailed specifications and expert recommendations."/>
+    
+    <title>Gaming Laptop Details - LaptopHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        body { 
+            background-color: #131314; 
+            color: white; 
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .glass { 
+            background: rgba(255,255,255,0.05); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255,255,255,0.1); 
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .specs-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+    </style>
 </head>
-<body class="p-4">
-    <header class="flex justify-between items-center h-16 mb-8">
-        <a href="index.html" class="material-symbols-outlined">arrow_back</a>
-        <div class="font-bold text-xl text-[#b0c6ff]">LaptopHub</div>
-        <a href="checkout.html" class="material-symbols-outlined">shopping_cart</a>
+<body class="pb-20">
+    <!-- Header -->
+    <header class="flex justify-between items-center h-16 px-4 border-b border-white/10 bg-black/30">
+        <a href="index.html" class="material-symbols-outlined hover:text-[#00e0ff] transition" aria-label="Back to home">arrow_back</a>
+        <div class="font-bold text-xl text-[#b0c6ff] flex items-center gap-2">
+            <span class="material-symbols-outlined">laptop</span>
+            LaptopHub
+        </div>
+        <a href="checkout.html" class="material-symbols-outlined hover:text-[#00e0ff] transition" aria-label="Shopping cart">shopping_cart</a>
     </header>
 
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaNvtl27WyGbXHYP1hQCY_EvvRkH74xYy-Ovf3p3d527SVmsoN7DqpKRijdz1Kxh1XiFVuNYNU2E53NnWQvys8OTmHmSHZIvSgXhY8aDA3NPooh1s8VgSxNyoIwz9hd77hgYW2c8kJKmptEPpXWgWh2E35ZN9BBXyLZzTGPp5HNyF9ZQhwuTiYKKNOjtu8bjnE_BJ5dbBHRqVHjn-gMbKMMc5M78ZDyk4EZhSaYGWn0nzNY1sMc9Vl9w" class="w-full rounded-xl mb-6">
-    
-    <h1 class="text-3xl font-bold mb-2">HP OMEN 16</h1>
-    <p class="text-gray-400 mb-6">Engineered for pure performance. Dominate every game with elite cooling.</p>
-    
-    <div class="text-3xl font-bold text-[#b0c6ff] mb-8">₹1,22,000</div>
-
-    <div class="grid grid-cols-2 gap-4 mb-24">
-        <div class="glass p-4 rounded-lg">
-            <span class="text-gray-400 text-xs">PROCESSOR</span>
-            <div class="font-bold">AMD Ryzen 7</div>
+    <main class="p-4 md:p-8 max-w-2xl mx-auto">
+        <!-- Product Image -->
+        <div class="mb-6 rounded-lg overflow-hidden bg-gray-900 h-80 flex items-center justify-center">
+            <img id="productImage" src="https://via.placeholder.com/500x400/1a1a1a/00e0ff?text=Gaming+Laptop" alt="Gaming Laptop" class="w-full h-full object-cover">
         </div>
-        <div class="glass p-4 rounded-lg">
-            <span class="text-gray-400 text-xs">GRAPHICS</span>
-            <div class="font-bold">RTX 4060</div>
+        
+        <!-- Product Info -->
+        <div class="mb-8">
+            <h1 id="productName" class="text-4xl font-bold mb-3">HP OMEN 16</h1>
+            <p id="productDescription" class="text-gray-400 mb-6 text-lg">Engineered for pure performance. Dominate every game with elite cooling and power.</p>
+            <div class="flex items-baseline gap-4 mb-6">
+                <div id="productPrice" class="text-4xl font-bold text-[#00e0ff]">₹1,45,000</div>
+                <span class="text-gray-500 text-sm">Inclusive of all taxes</span>
+            </div>
         </div>
-    </div>
 
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-[#131314] border-t border-white/10 flex gap-4">
-        <a href="checkout.html" class="flex-1 bg-white text-black text-center py-4 rounded-xl font-bold">Buy Now</a>
-    </div>
-</body></html>
+        <!-- Key Specifications -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Key Specifications</h2>
+            <div class="specs-grid">
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">PROCESSOR</span>
+                    <div id="processor" class="font-bold text-lg">Intel Core i9-13900H</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">GRAPHICS</span>
+                    <div id="graphics" class="font-bold text-lg">NVIDIA RTX 4080</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">RAM</span>
+                    <div id="ram" class="font-bold text-lg">32GB DDR5</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">STORAGE</span>
+                    <div id="storage" class="font-bold text-lg">1TB NVMe SSD</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">DISPLAY</span>
+                    <div id="display" class="font-bold text-lg">16" 165Hz QHD</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">BATTERY</span>
+                    <div id="battery" class="font-bold text-lg">86Wh Fast Charge</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">WEIGHT</span>
+                    <div id="weight" class="font-bold text-lg">2.4 kg</div>
+                </div>
+                <div class="glass p-4 rounded-lg">
+                    <span class="text-gray-400 text-xs block mb-2">WARRANTY</span>
+                    <div id="warranty" class="font-bold text-lg">2 Years</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Features</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                    <span class="text-[#00e0ff] mt-1">✓</span>
+                    <span>Advanced thermal management system with dual fans for optimal cooling</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-[#00e0ff] mt-1">✓</span>
+                    <span>High refresh rate display for smooth gameplay and reduced motion blur</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-[#00e0ff] mt-1">✓</span>
+                    <span>RGB backlit mechanical keyboard with customizable lighting</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-[#00e0ff] mt-1">✓</span>
+                    <span>Thunderbolt 4 and USB-C connectivity for fast data transfer</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-[#00e0ff] mt-1">✓</span>
+                    <span>Premium build quality with aluminum chassis</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#131314] to-transparent flex gap-4">
+            <button onclick="goBack()" class="flex-1 border border-gray-600 text-white py-4 rounded-xl font-bold hover:border-[#00e0ff] hover:text-[#00e0ff] transition">Back</button>
+            <button id="buyBtn" onclick="buyNow()" class="flex-1 bg-[#00e0ff] text-black py-4 rounded-xl font-bold hover:bg-cyan-300 transition">Buy Now</button>
+        </div>
+    </main>
+
+    <script>
+        // Product database
+        const products = {
+            1: {
+                name: "HP OMEN 16",
+                description: "Engineered for pure performance. Dominate every game with elite cooling and power.",
+                price: 145000,
+                image: "https://via.placeholder.com/500x400/1a1a1a/00e0ff?text=HP+OMEN+16",
+                processor: "Intel Core i9-13900H",
+                graphics: "NVIDIA RTX 4080",
+                ram: "32GB DDR5",
+                storage: "1TB NVMe SSD",
+                display: "16\" 165Hz QHD",
+                battery: "86Wh Fast Charge",
+                weight: "2.4 kg",
+                warranty: "2 Years"
+            },
+            2: {
+                name: "ASUS ROG Strix G16",
+                description: "Performance meets portability. A powerhouse designed for competitive gaming.",
+                price: 112000,
+                image: "https://via.placeholder.com/500x400/1a1a1a/00e0ff?text=ASUS+ROG",
+                processor: "Intel Core i7-13700H",
+                graphics: "NVIDIA RTX 4070",
+                ram: "16GB DDR5",
+                storage: "512GB NVMe SSD",
+                display: "16\" 144Hz FHD",
+                battery: "90Wh",
+                weight: "2.2 kg",
+                warranty: "2 Years"
+            },
+            3: {
+                name: "Lenovo Legion Pro 7",
+                description: "Ultimate gaming performance. Maximum power for maximum performance.",
+                price: 185000,
+                image: "https://via.placeholder.com/500x400/1a1a1a/00e0ff?text=Lenovo+Legion",
+                processor: "AMD Ryzen 9 7945HX3D",
+                graphics: "NVIDIA RTX 4090",
+                ram: "32GB DDR5",
+                storage: "1TB NVMe SSD",
+                display: "16\" 165Hz QHD",
+                battery: "80Wh Fast Charge",
+                weight: "2.5 kg",
+                warranty: "3 Years"
+            }
+        };
+
+        // Load product on page load
+        window.addEventListener('load', function() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id') || 1;
+            loadProduct(productId);
+        });
+
+        function loadProduct(id) {
+            const product = products[id];
+            if (!product) return;
+
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('productPrice').textContent = `₹${product.price.toLocaleString()}`;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productImage').alt = product.name;
+            
+            document.getElementById('processor').textContent = product.processor;
+            document.getElementById('graphics').textContent = product.graphics;
+            document.getElementById('ram').textContent = product.ram;
+            document.getElementById('storage').textContent = product.storage;
+            document.getElementById('display').textContent = product.display;
+            document.getElementById('battery').textContent = product.battery;
+            document.getElementById('weight').textContent = product.weight;
+            document.getElementById('warranty').textContent = product.warranty;
+
+            // Update page title and meta
+            document.title = `${product.name} - LaptopHub`;
+        }
+
+        function buyNow() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id') || 1;
+            const product = products[productId];
+
+            // Add to cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = {
+                id: productId,
+                name: product.name,
+                price: product.price,
+                quantity: 1,
+                timestamp: Date.now()
+            };
+
+            const existingItem = cart.find(p => p.id === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(item);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'checkout.html';
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

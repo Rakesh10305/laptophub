@@ -1,49 +1,163 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LaptopHub - Mobile Homepage</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<style>
-    .glass-panel { background: rgba(42, 42, 43, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
-    .glow-accent { box-shadow: 0 0 20px rgba(0, 224, 255, 0.15); }
-    body { background-color: #131314; color: #e5e2e3; min-height: 100vh; }
-</style>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="LaptopHub - Find your perfect gaming laptop. Premium performance laptops with expert recommendations."/>
+    <meta property="og:title" content="LaptopHub - Gaming Laptops"/>
+    <meta property="og:description" content="Discover high-performance gaming laptops at LaptopHub"/>
+    <meta property="og:type" content="website"/>
+    
+    <title>LaptopHub - Premium Gaming Laptops</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        .glass-panel { 
+            background: rgba(42, 42, 43, 0.4); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        .glow-accent { 
+            box-shadow: 0 0 20px rgba(0, 224, 255, 0.15); 
+        }
+        body { 
+            background-color: #131314; 
+            color: #e5e2e3; 
+            min-height: 100vh; 
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: linear-gradient(135deg, #1e1e1f, #2a2a2b);
+        }
+    </style>
 </head>
 <body class="font-body-md">
-<nav class="bg-surface/80 backdrop-blur-xl text-[#b0c6ff] fixed top-0 w-full z-50 border-b border-white/10 h-16 flex items-center justify-between px-4">
-    <div class="font-bold text-xl">LaptopHub</div>
-    <div class="flex gap-4">
-        <a href="compare.html" class="material-symbols-outlined">compare_arrows</a>
-        <a href="checkout.html" class="material-symbols-outlined">shopping_cart</a>
-    </div>
-</nav>
+    <!-- Navigation -->
+    <nav class="bg-surface/80 backdrop-blur-xl text-[#b0c6ff] fixed top-0 w-full z-50 border-b border-white/10 h-16 flex items-center justify-between px-4">
+        <div class="font-bold text-xl flex items-center gap-2">
+            <span class="material-symbols-outlined">laptop</span>
+            LaptopHub
+        </div>
+        <div class="flex gap-4">
+            <a href="compare.html" class="material-symbols-outlined hover:text-[#00e0ff] transition" aria-label="Compare laptops" title="Compare Laptops">compare_arrows</a>
+            <a href="checkout.html" class="material-symbols-outlined hover:text-[#00e0ff] transition" aria-label="Shopping cart" title="Shopping Cart">shopping_cart</a>
+        </div>
+    </nav>
+    
+    <main class="pt-24 pb-20 px-4 flex flex-col gap-12">
+        <!-- Hero Section -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Choose Your <br/> <span class="text-[#00e0ff]">Perfect Gaming Laptop</span></h1>
+            <p class="text-gray-400 mb-6 text-lg">Unleash raw performance. Engineered for victory.</p>
+            <a href="product.html?id=1" class="bg-[#00e0ff] text-black px-8 py-4 rounded-lg font-bold hover:bg-cyan-300 transition inline-block">View HP OMEN 16</a>
+        </section>
 
-<main class="pt-24 pb-20 px-4 flex flex-col gap-12">
-    <section class="text-center py-12">
-        <h1 class="text-3xl font-extrabold mb-4">Choose Your <br/> <span class="text-[#00e0ff]">Perfect Gaming Laptop</span></h1>
-        <p class="text-gray-400 mb-6">Unleash raw performance. Engineered for victory.</p>
-        <a href="product.html" class="bg-[#00e0ff] text-black px-8 py-4 rounded-lg font-bold">View HP OMEN</a>
-    </section>
-
-    <section class="flex flex-col gap-6">
-        <h2 class="text-2xl font-bold">Featured Rigs</h2>
-        <!-- Product Card -->
-        <div class="glass-panel rounded-xl overflow-hidden glow-accent">
-            <div class="h-48 bg-gray-800 p-4 flex items-center justify-center">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU1sK3athPa-ug3HTX9qLQHmQ8OAArlqyyE22a9O9gWH2uHwDsm4hS-vlReed0_0hnn6e80Qy1bXLrFd_fixSuS6WbanHsNHvkdOnc3nQZLYcWzoxfbwRD0PYro1QcBIM5NxSPnKeN4VyM7g14SAy2pOYCRx1jWwSdpUxeQpMEvRNX7-es9-ab75r-C7bRgCQALSs7zIhemJt9rhqq5U-xRUujSXv2eBsHOMg2Ih0iUH7DWRJbWQUmmQ" class="object-contain h-full w-full">
-            </div>
-            <div class="p-6">
-                <h3 class="text-xl font-bold">HP OMEN 16</h3>
-                <p class="text-gray-400 text-sm mb-4">Intel i9, 32GB RAM, 1TB SSD</p>
-                <div class="text-lg text-[#00e0ff] mb-4">₹1,45,000+</div>
-                <div class="grid grid-cols-2 gap-3">
-                    <a href="product.html" class="border border-gray-600 text-center py-3 rounded-lg">Details</a>
-                    <a href="checkout.html" class="bg-[#568dff] text-center py-3 rounded-lg font-bold">Buy Now</a>
+        <!-- Featured Rigs Section -->
+        <section class="flex flex-col gap-6">
+            <h2 class="text-2xl font-bold">Featured Rigs</h2>
+            
+            <!-- Product Card 1: HP OMEN 16 -->
+            <div class="glass-panel rounded-xl overflow-hidden glow-accent hover:shadow-lg transition">
+                <div class="h-48 bg-gray-800 p-4 flex items-center justify-center overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/00e0ff?text=HP+OMEN+16" alt="HP OMEN 16 Gaming Laptop" class="product-image">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">HP OMEN 16</h3>
+                    <p class="text-gray-400 text-sm mb-2">Intel i9, 32GB RAM, 1TB SSD</p>
+                    <p class="text-gray-500 text-xs mb-4">RTX 4080 • 165Hz Display • Cooling Beast</p>
+                    <div class="text-2xl text-[#00e0ff] font-bold mb-4">₹1,45,000</div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="product.html?id=1" class="border border-gray-600 text-center py-3 rounded-lg hover:border-[#00e0ff] hover:text-[#00e0ff] transition">Details</a>
+                        <button onclick="addToCart(1, 'HP OMEN 16', 145000)" class="bg-[#568dff] text-center py-3 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
-</body></html>
+
+            <!-- Product Card 2: ASUS ROG -->
+            <div class="glass-panel rounded-xl overflow-hidden glow-accent hover:shadow-lg transition">
+                <div class="h-48 bg-gray-800 p-4 flex items-center justify-center overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/00e0ff?text=ASUS+ROG" alt="ASUS ROG Gaming Laptop" class="product-image">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">ASUS ROG Strix G16</h3>
+                    <p class="text-gray-400 text-sm mb-2">Intel i7, 16GB RAM, 512GB SSD</p>
+                    <p class="text-gray-500 text-xs mb-4">RTX 4070 • 144Hz Display • Lightweight</p>
+                    <div class="text-2xl text-[#00e0ff] font-bold mb-4">₹1,12,000</div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="product.html?id=2" class="border border-gray-600 text-center py-3 rounded-lg hover:border-[#00e0ff] hover:text-[#00e0ff] transition">Details</a>
+                        <button onclick="addToCart(2, 'ASUS ROG Strix G16', 112000)" class="bg-[#568dff] text-center py-3 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3: Lenovo Legion -->
+            <div class="glass-panel rounded-xl overflow-hidden glow-accent hover:shadow-lg transition">
+                <div class="h-48 bg-gray-800 p-4 flex items-center justify-center overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300/1a1a1a/00e0ff?text=Lenovo+Legion" alt="Lenovo Legion Gaming Laptop" class="product-image">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Lenovo Legion Pro 7</h3>
+                    <p class="text-gray-400 text-sm mb-2">AMD Ryzen 9, 32GB RAM, 1TB SSD</p>
+                    <p class="text-gray-500 text-xs mb-4">RTX 4090 • 165Hz Display • Ultimate Power</p>
+                    <div class="text-2xl text-[#00e0ff] font-bold mb-4">₹1,85,000</div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="product.html?id=3" class="border border-gray-600 text-center py-3 rounded-lg hover:border-[#00e0ff] hover:text-[#00e0ff] transition">Details</a>
+                        <button onclick="addToCart(3, 'Lenovo Legion Pro 7', 185000)" class="bg-[#568dff] text-center py-3 rounded-lg font-bold hover:bg-blue-600 transition">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-8">
+            <h2 class="text-2xl font-bold mb-6">Why Choose LaptopHub?</h2>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+                <div class="glass-panel p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="font-bold text-sm">Peak Performance</h3>
+                    <p class="text-xs text-gray-400">Latest GPUs & CPUs</p>
+                </div>
+                <div class="glass-panel p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">❄️</div>
+                    <h3 class="font-bold text-sm">Advanced Cooling</h3>
+                    <p class="text-xs text-gray-400">Stay cool under load</p>
+                </div>
+                <div class="glass-panel p-4 rounded-lg text-center">
+                    <div class="text-3xl mb-2">🎮</div>
+                    <h3 class="font-bold text-sm">Gaming Ready</h3>
+                    <p class="text-xs text-gray-400">High refresh displays</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-white/10 py-8 px-4 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 LaptopHub. All rights reserved.</p>
+        <p class="mt-2"><a href="privacy.html" class="hover:text-[#00e0ff] transition">Privacy Policy</a> | <a href="terms.html" class="hover:text-[#00e0ff] transition">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Shopping cart management
+        function addToCart(id, name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = {id, name, price, quantity: 1, timestamp: Date.now()};
+            
+            const existingItem = cart.find(p => p.id === id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(item);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+            console.log('Cart updated:', cart);
+        }
+    </script>
+</body>
+</html>
