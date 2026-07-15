@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaptopHub - Mobile Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+    .glass-panel { background: rgba(42, 42, 43, 0.4); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .glow-accent { box-shadow: 0 0 20px rgba(0, 224, 255, 0.15); }
+    body { background-color: #131314; color: #e5e2e3; min-height: 100vh; }
+</style>
+</head>
+<body class="font-body-md">
+<nav class="bg-surface/80 backdrop-blur-xl text-[#b0c6ff] fixed top-0 w-full z-50 border-b border-white/10 h-16 flex items-center justify-between px-4">
+    <div class="font-bold text-xl">LaptopHub</div>
+    <div class="flex gap-4">
+        <a href="compare.html" class="material-symbols-outlined">compare_arrows</a>
+        <a href="checkout.html" class="material-symbols-outlined">shopping_cart</a>
+    </div>
+</nav>
+
+<main class="pt-24 pb-20 px-4 flex flex-col gap-12">
+    <section class="text-center py-12">
+        <h1 class="text-3xl font-extrabold mb-4">Choose Your <br/> <span class="text-[#00e0ff]">Perfect Gaming Laptop</span></h1>
+        <p class="text-gray-400 mb-6">Unleash raw performance. Engineered for victory.</p>
+        <a href="product.html" class="bg-[#00e0ff] text-black px-8 py-4 rounded-lg font-bold">View HP OMEN</a>
+    </section>
+
+    <section class="flex flex-col gap-6">
+        <h2 class="text-2xl font-bold">Featured Rigs</h2>
+        <!-- Product Card -->
+        <div class="glass-panel rounded-xl overflow-hidden glow-accent">
+            <div class="h-48 bg-gray-800 p-4 flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU1sK3athPa-ug3HTX9qLQHmQ8OAArlqyyE22a9O9gWH2uHwDsm4hS-vlReed0_0hnn6e80Qy1bXLrFd_fixSuS6WbanHsNHvkdOnc3nQZLYcWzoxfbwRD0PYro1QcBIM5NxSPnKeN4VyM7g14SAy2pOYCRx1jWwSdpUxeQpMEvRNX7-es9-ab75r-C7bRgCQALSs7zIhemJt9rhqq5U-xRUujSXv2eBsHOMg2Ih0iUH7DWRJbWQUmmQ" class="object-contain h-full w-full">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold">HP OMEN 16</h3>
+                <p class="text-gray-400 text-sm mb-4">Intel i9, 32GB RAM, 1TB SSD</p>
+                <div class="text-lg text-[#00e0ff] mb-4">₹1,45,000+</div>
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="product.html" class="border border-gray-600 text-center py-3 rounded-lg">Details</a>
+                    <a href="checkout.html" class="bg-[#568dff] text-center py-3 rounded-lg font-bold">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body></html>
