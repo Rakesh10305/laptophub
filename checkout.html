@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Checkout</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style> body { background-color: #131314; color: white; } </style>
+</head>
+<body class="p-4">
+    <header class="flex justify-between mb-8">
+        <a href="index.html" class="material-symbols-outlined">close</a>
+        <div class="font-bold">Checkout</div>
+        <span class="material-symbols-outlined text-green-400">lock</span>
+    </header>
+
+    <div class="bg-gray-800 p-4 rounded-xl mb-8">
+        <h2 class="font-bold mb-4">Order Summary</h2>
+        <div class="flex justify-between">
+            <span>HP OMEN 16</span>
+            <span>₹1,22,000</span>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-4">
+        <input type="text" placeholder="Full Name" class="bg-gray-900 border border-gray-700 p-4 rounded-lg">
+        <input type="email" placeholder="Email Address" class="bg-gray-900 border border-gray-700 p-4 rounded-lg">
+        <button class="bg-[#568dff] text-white py-4 rounded-xl font-bold mt-4">Place Order</button>
+    </div>
+</body></html>
